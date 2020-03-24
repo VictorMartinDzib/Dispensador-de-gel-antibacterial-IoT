@@ -1,5 +1,7 @@
 {
   "name": "DispensadorApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

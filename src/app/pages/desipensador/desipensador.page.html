@@ -1,0 +1,38 @@
+<ion-header color="primary">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dispensador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-list-header>
+      <ion-label><h2>Control de dispensador de gel antibacterial</h2></ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Dispensador: {{estadoText}}</ion-label>
+      <ion-toggle [(ngModel)]="toggleStatus" (ionChange)="cambiarEstado($event)" size="large"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Veces de uso: </ion-label>
+      <ion-button  expand="block" fill="clear" shape="round">
+       <b><h3>{{total}}</h3></b>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+ 
+</ion-content>
+ <ion-footer>
+    <ion-toolbar color="primary"> 
+      <ion-title>Equipo los jaguares</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="presentModal()">
+          <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
